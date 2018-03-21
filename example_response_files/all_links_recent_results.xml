@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status>ok</status>
+  <request_path>v1/links/recent_results</request_path>
+  <server_timestamp>1339782640</server_timestamp>
+<finished_after_timestamp_used>1338908448</finished_after_timestamp_used>
+  <links>
+    <link>
+      <link_name>New York Sales Staff</link_name>
+      <link_id>2343765</link_id>
+    </link>
+    <link>
+      <link_name>Sydney Sales Staff</link_name>
+      <link_id>985674</link_id>
+    </link>
+  </links>
+  <tests>
+    <test>
+      <test_name>Product specials and discounts quiz</test_name>
+      <test_id>48756</test_id>
+    </test>
+  </tests>
+  <results>
+    <result>
+      <first>Mary</first>
+      <last>Simmons</last>
+      <test_id>48756</test_id>
+      <link_id>2343765</link_id>
+      <percentage>70</percentage>
+      <points_scored>28</points_scored>
+      <points_available>40</points_available>
+      <time_started>1339775290</time_started>
+      <time_finished>1339776622</time_finished>
+      <email>mary@example.com</email>
+      <access_code>1</access_code>
+      <extra_info>Demographic answer 1</extra_info>
+      <extra_info2>Demographic answer 2</extra_info2>
+      <extra_info3>Demographic answer 3</extra_info3>
+      <extra_info4>Demographic answer 4</extra_info4>
+      <extra_info5>Demographic answer 5</extra_info5>
+      <duration>00:22:20</duration>
+      <requires_grading>No</requires_grading>
+      <link_result_id>22453</link_result_id>
+      <cm_user_id>74524</cm_user_id>
+      <ip_address>192.0.43.10</ip_address>
+    </result>
+    <result>
+      <first>Gary</first>
+      <last>Carter</last>
+      <test_id>48756</test_id>
+      <link_id>2343765</link_id>
+      <percentage>80</percentage>
+      <points_scored>32</points_scored>
+      <points_available>40</points_available>
+      <time_started>1339776290</time_started>
+      <time_finished>1339776822</time_finished>
+      <email>gary@example.com</email>
+      <access_code>1</access_code>
+      <extra_info>Demographic answer 1</extra_info>
+      <extra_info2>Demographic answer 2</extra_info2>
+      <extra_info3>Demographic answer 3</extra_info3>
+      <extra_info4>Demographic answer 4</extra_info4>
+      <extra_info5>Demographic answer 5</extra_info5>
+      <duration>00:09:26</duration>
+      <requires_grading>No</requires_grading>
+      <link_result_id>22453</link_result_id>
+      <cm_user_id>45613</cm_user_id>
+      <ip_address>192.0.43.10</ip_address>
+    </result>
+    <result>
+      <first>Carl</first>
+      <last>Bright</last>
+      <test_id>48756</test_id>
+      <link_id>985674</link_id>
+      <percentage>80</percentage>
+      <points_scored>32</points_scored>
+      <points_available>40</points_available>
+      <time_started>1339776290</time_started>
+      <time_finished>1339776822</time_finished>
+      <email>gary@example.com</email>
+      <access_code>154</access_code>
+      <extra_info>Demographic answer 1</extra_info>
+      <extra_info2>Demographic answer 2</extra_info2>
+      <extra_info3>Demographic answer 3</extra_info3>
+      <extra_info4>Demographic answer 4</extra_info4>
+      <extra_info5>Demographic answer 5</extra_info5>
+      <duration>00:09:26</duration>
+      <requires_grading>No</requires_grading>
+      <link_result_id>22453</link_result_id>
+      <cm_user_id>u7y45t</cm_user_id>
+      <ip_address>192.0.43.10</ip_address>
+    </result>
+  </results>
+  <num_results_available>3</num_results_available>
+  <num_results_returned>3</num_results_returned>
+  <more_results_exist/>
+  <next_finished_after_timestamp>1339776622</next_finished_after_timestamp>
+</response>

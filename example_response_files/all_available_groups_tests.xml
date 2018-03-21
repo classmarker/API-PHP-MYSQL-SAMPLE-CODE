@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status>ok</status>
+  <request_path>v1</request_path>
+  <server_timestamp>1339769771</server_timestamp>
+  <groups>
+    <group>
+      <group_name>Internal Accounts department</group_name>
+      <group_id>29765</group_id>
+      <assigned_tests>
+        <test>
+          <test_name>Health and safety exam</test_name>
+          <test_id>64776</test_id>
+        </test>
+        <test>
+          <test_name>March Quarter Skills assesment</test_name>
+          <test_id>40811</test_id>
+        </test>
+        <test>
+          <test_name>Billing system exam</test_name>
+          <test_id>38676</test_id>
+        </test>
+        <test>
+          <test_name>Customer complaints responses quiz</test_name>
+          <test_id>95645</test_id>
+        </test>
+      </assigned_tests>
+    </group>
+    <group>
+      <group_name>Internal Sales Staff</group_name>
+      <group_id>73645</group_id>
+      <assigned_tests>
+        <test>
+          <test_name>Health and safety exam</test_name>
+          <test_id>64776</test_id>
+        </test>
+        <test>
+          <test_name>March Quarter Skills assesment</test_name>
+          <test_id>40811</test_id>
+        </test>
+        <test>
+          <test_name>Billing system exam</test_name>
+          <test_id>38676</test_id>
+        </test>
+      </assigned_tests>
+    </group>
+  </groups>
+  <links>
+    <link>
+      <link_name>New York Sales Staff</link_name>
+      <link_id>2343765</link_id>
+      <assigned_tests>
+        <test>
+          <test_name>Product specials &amp; discounts quiz</test_name>
+          <test_id>48756</test_id>
+        </test>
+      </assigned_tests>
+    </link>
+    <link>
+      <link_name>Sydney Sales Staff</link_name>
+      <link_id>985674</link_id>
+      <assigned_tests>
+        <test>
+          <test_name>Product specials &amp; discounts quiz</test_name>
+          <test_id>48756</test_id>
+        </test>
+      </assigned_tests>
+    </link>
+  </links>
+</response>

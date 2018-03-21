@@ -1,0 +1,118 @@
+--
+-- NOTES: The following tables how group results and link results separately due to the different data fields used in both registered and non-registered user test results. 
+-- If you only perform group testing of register users you only need the test table + group related tables.
+-- If you only perform link testing of non-registered users you only need the test table + link related tables.
+-- We recommend adding both however in case the ClassMarker administrator starts testing differently (testing non-registered users opposed to registered user for example), you have the tables ready to store retrieved results.
+--
+
+-- Disclaimer:  ClassMarker Pty Ltd accepts no responsibility whatsoever from usage of these API scripts and Classes
+--  			and shall be held harmless from any and all litigation, liability, and responsibilities.
+
+
+--
+-- Table structure for table `classmarker_tests`
+-- This tables holds test names and groups IDs, used to show group name when viewing scores from 
+--
+
+CREATE TABLE IF NOT EXISTS `classmarker_tests` (
+  `test_id` int(11) NOT NULL,
+  `test_name` varchar(255) NOT NULL,
+   UNIQUE KEY (`test_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+
+--
+-- Table structure for table `classmarker_groups`
+-- This tables holds group names and group IDs,
+-- used to show group name when viewing results from "classmarker_group_results" table 
+--
+
+CREATE TABLE IF NOT EXISTS `classmarker_groups` (
+  `group_id` int(11) NOT NULL,
+  `group_name` varchar(100) NOT NULL,
+  UNIQUE KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--
+-- Table structure for table `classmarker_links`
+-- This tables holds link names and link IDs,
+-- used to show group name when viewing results from "classmarker_links_results" table 
+--
+
+CREATE TABLE IF NOT EXISTS `classmarker_links` (
+  `link_id` int(11) NOT NULL,
+  `link_name` varchar(100) NOT NULL,
+  UNIQUE KEY `link_id` (`link_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+--
+-- Table structure for table classmarker_group_results
+-- This table hold results taken from tests that have been taken from within groups. 
+-- Only registered members of each group can access these tests when logged into ClasMarker.
+--
+
+CREATE TABLE IF NOT EXISTS `classmarker_group_results` (
+  `pk_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'For your internal use - not related to ClassMarker ids',
+  `user_id` int(11) NOT NULL DEFAULT '0' COMMENT 'user id for ClassMarker registered user',
+  `test_id` int(11) NOT NULL COMMENT 'The relational test_id from classmarker_tests table',
+  `group_id` int(11) NOT NULL COMMENT 'The relational group_id from classmarker_groups table',
+  `first` varchar(50) DEFAULT NULL COMMENT 'first name',
+  `last` varchar(50) DEFAULT NULL COMMENT 'last name',
+  `email` varchar(100) DEFAULT NULL COMMENT 'email address',
+  `percentage` decimal(5,1) NOT NULL COMMENT 'scored percentage correct',
+  `points_scored` decimal(5,1) NOT NULL COMMENT 'sum of all points scored',
+  `points_available` decimal(5,1) NOT NULL COMMENT 'sum of all points available for all questions in this test at the time it was taken (ClassMarker tests can be edited)',
+  `time_started` int(11) NOT NULL,
+  `time_finished` int(11) NOT NULL,
+  `duration` varchar(8) NOT NULL DEFAULT '0',
+  `status` varchar(2) NOT NULL DEFAULT 'f',
+  `requires_grading` varchar(3) NOT NULL DEFAULT 'No' COMMENT 'No: score is final, YES: test is still waiting for essay questions to be marked by ClassMarker administrator, score may change',
+  PRIMARY KEY (`pk_id`),
+  UNIQUE KEY `user_id` (`user_id`,`test_id`,`group_id`,`time_finished`),
+  KEY `test_id` (`test_id`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+--
+-- Table structure for table classmarker_link_results
+-- This table hold results taken from tests that have been taken via Direct link/embed code. 
+-- Public and Private options are available to give access to these tests.
+--
+
+CREATE TABLE IF NOT EXISTS `classmarker_link_results` (
+  `pk_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'For your internal use - not related to ClassMarker ids',
+  `link_result_id` int(11) NOT NULL COMMENT 'ClassMarker id test is saved under',
+  `test_id` int(11) NOT NULL COMMENT 'The relational test_id from classmarker_tests table',
+  `link_id` int(11) NOT NULL COMMENT 'The relational link_id from classmarker_links table',
+  `first` varchar(50) DEFAULT NULL COMMENT 'first name',
+  `last` varchar(50) DEFAULT NULL COMMENT 'last name',
+  `email` varchar(100) DEFAULT NULL COMMENT 'email address',
+  `percentage` decimal(5,1) NOT NULL COMMENT 'scored percentage correct',
+  `points_scored` decimal(5,1) NOT NULL COMMENT 'sum of all points scored',
+  `points_available` decimal(5,1) NOT NULL COMMENT 'sum of all points available for all questions in this test at the time it was taken (ClassMarker tests can be edited)',
+  `time_started` int(11) NOT NULL,
+  `time_finished` int(11) NOT NULL,
+  `duration` varchar(8) NOT NULL,
+  `status` varchar(2) NOT NULL COMMENT 'f: finished, ip: In progress',
+  `requires_grading` varchar(3) NOT NULL DEFAULT 'No' COMMENT 'No: score is final, YES: test is still waiting for essay questions to be marked by ClassMarker administrator, score may change',
+  `cm_user_id` varchar(100) DEFAULT NULL COMMENT 'optional id passed to ClassMarker from your system when test starts. Advice: Use separator "a|b" to pass multiple values',
+  `access_code` varchar(255) DEFAULT NULL COMMENT 'test takers individual access code used to access test',
+  `extra_info` varchar(255) DEFAULT NULL COMMENT 'answer to first demographic question if asked',
+  `extra_info2` varchar(255) DEFAULT NULL COMMENT 'answer to second demographic question if asked',
+  `extra_info3` varchar(255) DEFAULT NULL COMMENT 'answer to third demographic question if asked',
+  `extra_info4` varchar(255) DEFAULT NULL COMMENT 'answer to fourth demographic question if asked',
+  `extra_info5` varchar(255) DEFAULT NULL COMMENT 'answer to fifth demographic question if asked',
+  `ip_address` varchar(16) NOT NULL COMMENT 'users IP address',
+  PRIMARY KEY (`pk_id`),
+  UNIQUE KEY `link_result_id` (`link_result_id`,`time_finished`),
+  KEY `test_id` (`test_id`),
+  KEY `link_id` (`link_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

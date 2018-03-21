@@ -1,0 +1,78 @@
+{
+   "status":"ok",
+   "request_path":"v1/links/38676/tests/48756/recent_results",
+   "server_timestamp":1339838367,
+   "finished_after_timestamp_used":1338908448,
+   "links":[
+      {
+         "link":{
+            "link_name":"New York Sales Staff",
+            "link_id":"38676"
+         }
+      }
+   ],
+   "tests":[
+      {
+         "test":{
+            "test_name":"Product specials and discounts quiz",
+            "test_id":"48756"
+         }
+      }
+   ],
+   "results":[
+      {
+         "result":{
+            "first":"Mary",
+            "last":"Simmons",
+            "test_id":"48756",
+            "link_id":"38676",
+            "percentage":"70",
+            "points_scored":28,
+            "points_available":40,
+            "time_started":"1339836668",
+            "time_finished":"1339836849",
+            "email":"mary@example.com",
+            "access_code":"123",
+            "extra_info":"Demographic answer 1",
+            "extra_info2":"Demographic answer 2",
+            "extra_info3":"Demographic answer 3",
+            "extra_info4":"Demographic answer 4",
+            "extra_info5":"Demographic answer 5",
+            "duration":"00:02:41",
+            "requires_grading":"No",
+            "link_result_id":22455,
+            "cm_user_id":"74524",
+            "ip_address":"192.0.43.10"
+         }
+      },
+      {
+         "result":{
+            "first":"Gary",
+            "last":"Carter",
+            "test_id":"48756",
+            "link_id":"38676",
+            "percentage":"81",
+            "points_scored":32.4,
+            "points_available":40,
+            "time_started":"1339836668",
+            "time_finished":"1339836849",
+            "email":"mary@example.com",
+            "access_code":"123",
+            "extra_info":"Demographic answer 1",
+            "extra_info2":"Demographic answer 2",
+            "extra_info3":"Demographic answer 3",
+            "extra_info4":"Demographic answer 4",
+            "extra_info5":"Demographic answer 5",
+            "duration":"00:02:41",
+            "requires_grading":"No",
+            "link_result_id":22455,
+            "cm_user_id":"45613",
+            "ip_address":"192.0.43.10"
+         }
+      }
+   ],
+   "num_results_available":2,
+   "num_results_returned":2,
+   "more_results_exist":false,
+   "next_finished_after_timestamp":1339836709
+}

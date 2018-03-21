@@ -1,0 +1,115 @@
+{
+   "status":"ok",
+   "request_path":"v1",
+   "server_timestamp":1339769771,
+   "groups":[
+      {
+         "group":{
+            "group_name":"Internal Accounts department",
+            "group_id":29765,
+            "assigned_tests":[
+               {
+                  "test":{
+                     "test_name":"Health and safety exam",
+                     "test_id":"64776"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"March Quarter Skills assesment",
+                     "test_id":"273864"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"Billing system exam",
+                     "test_id":"38676"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"Customer complaints responses quiz",
+                     "test_id":"95645"
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "group":{
+            "group_name":"Internal Sales Staff",
+            "group_id":73645,
+            "assigned_tests":[
+               {
+                  "test":{
+                     "test_name":"Health and safety",
+                     "test_id":"64776"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"Product specials and discounts quiz",
+                     "test_id":"48756"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"March Quarter Skills assesment",
+                     "test_id":"273864"
+                  }
+               },
+               {
+                  "test":{
+                     "test_name":"Billing system exam",
+                     "test_id":"38676"
+                  }
+               }
+            ]
+         }
+      }
+   ],
+   "links":[
+      {
+         "link":{
+            "link_name":"New York Sales Staff",
+            "link_id":2343765,
+            "assigned_tests":[
+               {
+                  "test":{
+                     "test_name":"Product specials and discounts quiz",
+                     "test_id":"48756"
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "link":{
+            "link_name":"Sydney Sales Staff",
+            "link_id":985674,
+            "assigned_tests":[
+               {
+                  "test":{
+                     "test_name":"Product specials and discounts quiz",
+                     "test_id":"48756"
+                  }
+               }
+            ]
+         }
+      },
+      {
+         "link":{
+            "link_name":"Pre-Employment: New Sales Staff",
+            "link_id":38476,
+            "assigned_tests":[
+               {
+                  "test":{
+                     "test_name":"Handling complaints quiz",
+                     "test_id":"46232"
+                  }
+               }
+            ]
+         }
+      }
+   ]
+}

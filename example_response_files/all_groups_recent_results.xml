@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+  <status>ok</status>
+  <request_path>v1/groups/recent_results</request_path>
+  <server_timestamp>1339841380</server_timestamp>
+  <finished_after_timestamp_used>1338908448</finished_after_timestamp_used>
+  <groups>
+    <group>
+      <group_id>29765</group_id>
+      <group_name>Internal Accounts department</group_name>
+    </group>
+    <group>
+      <group_id>73645</group_id>
+      <group_name>Internal Sales Staff</group_name>
+    </group>
+  </groups>
+  <tests>
+    <test>
+      <test_id>64776</test_id>
+      <test_name>Health and safety exam</test_name>
+    </test>
+  </tests>
+  <results>
+    <result>
+      <user_id>319118</user_id>
+      <first>Paul</first>
+      <last>Smith</last>
+      <email>paul@example.com</email>
+      <test_id>64776</test_id>
+      <group_id>29765</group_id>
+      <percentage>90</percentage>
+      <points_scored>18</points_scored>
+      <points_available>20</points_available>
+      <time_started>1339778290</time_started>
+      <time_finished>1339781298</time_finished>
+      <duration>"00:50:08</duration>
+      <requires_grading>No</requires_grading>
+    </result>
+     <result>
+      <user_id>319118</user_id>
+      <first>Tracy</first>
+      <last>Thompson</last>
+      <email>tracey@example.com</email>
+      <test_id>64776</test_id>
+      <group_id>73645</group_id>
+      <percentage>95</percentage>
+      <points_scored>19</points_scored>
+      <points_available>20</points_available>
+      <time_started>133977830</time_started>
+      <time_finished>133978998</time_finished>
+      <duration>"00:19:47</duration>
+      <requires_grading>No</requires_grading>
+    </result>
+  </results>
+  <num_results_available>2</num_results_available>
+  <num_results_returned>2</num_results_returned>
+  <more_results_exist></more_results_exist>
+  <next_finished_after_timestamp>1338785035</next_finished_after_timestamp>
+</response>

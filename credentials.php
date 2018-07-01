@@ -25,10 +25,12 @@ $administrator_email = 'example@example.com';
 
 
 /* Connect to DB */
-$mysqli = mysqli_connect($mysql_host, $mysql_username, $mysql_password, $mysql_database) or die('Could not connect: ' . mysql_error());
-if (mysqli_connect_errno($mysqli)) {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	exit;
+$mysqli = @mysqli_connect($mysql_host, $mysql_username, $mysql_password, $mysql_database);
+if (!$mysqli) {
+	echo '<p>Error: Unable to connect to MySQL.</p>';
+    echo 'Debugging errno: ' . mysqli_connect_errno() . '</p>';
+    echo 'Debugging error: ' . mysqli_connect_error() . '</p>';
+    exit;
 }
 
 

@@ -28,8 +28,8 @@ $administrator_email = 'example@example.com';
 $mysqli = @mysqli_connect($mysql_host, $mysql_username, $mysql_password, $mysql_database);
 if (!$mysqli) {
     echo '<p>Error: Unable to connect to MySQL.</p>';
-    echo 'Debugging errno: ' . mysqli_connect_errno() . '</p>';
-    echo 'Debugging error: ' . mysqli_connect_error() . '</p>';
+    echo '<p>Debugging errno: ' . mysqli_connect_errno() . '</p>';
+    echo '<p>Debugging error: ' . mysqli_connect_error() . '</p>';
     exit;
 }
 
